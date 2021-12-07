@@ -1,26 +1,22 @@
 package comunicacion;
 
-public class Tesis extends Escrito {
-	//ATRIBUTOS
-	private String idea;
-	private String conclusion;
-	private String[] argumentos;
-	private String referencias;
-	private String interpretacion;
-	
-	//CONSTRUCTOR
-	public Tesis(String origen, String titulo, String autor, int paginas, String idea, String[] argumentos, String conclusion, String referencias, String interpretacion) {
+public class Tesis extends Escrito{
+    private String idea;
+    private String[] argumentos;
+    private String conclusion;
+    private String referencias;
+    private String interpratacion;
+
+    public Tesis(String origen, String titulo, String autor, int paginas, String idea, String[] argumentos, String conclusion, String referencias, String interpratacion) {
         super(origen, titulo, autor, paginas);
         this.idea = idea;
-        this.referencias = referencias;
         this.argumentos = argumentos;
         this.conclusion = conclusion;
-        this.interpretacion = interpretacion;
+        this.referencias = referencias;
+        this.interpratacion = interpratacion;
     }
-	
-	//SET AND GET 
-	
-	public String getReferencias() {
+
+    public String getReferencias() {
         return referencias;
     }
 
@@ -28,8 +24,8 @@ public class Tesis extends Escrito {
         this.referencias = referencias;
     }
 
-    public String getInterpretacion() {
-        return interpretacion;
+    public String getInterpratacion() {
+        return interpratacion;
     }
 
     public String getIdea() {
@@ -47,31 +43,28 @@ public class Tesis extends Escrito {
     public void setArgumentos(String[] argumentos) {
         this.argumentos = argumentos;
     }
-    
+
     public String getConclusion() {
         return conclusion;
     }
 
-    public void setConclusion(String conclusio) {
-        this.conclusion = conclusio;
+    public void setConclusion(String conclusion) {
+        this.conclusion = conclusion;
     }
 
     public String interpretacion() {
-        return interpretacion;
+        return interpratacion;
     }
 
-    public void setInterprEtacion(String interpretacion) {
-        this.interpretacion = interpretacion;
+    public void setInterpratacion(String interpratacion) {
+        this.interpratacion = interpratacion;
     }
-    
-    //METODOS
-    
+
+    public int palabrasTotales(int ing) {
+        return this.getPaginas()*ing*5;
+    }
+
     public String toString() {
-    	return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + this.idea + "\n" + this.argumentos.length + "\n" + this.conclusion + "\n" + this.referencias;
-    }
-    
-    public int palabrasTotales(int saca) {
-    	int tena=5;
-    	return this.getPaginas()* saca * tena;
+        return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + this.idea + "\n" + this.argumentos.length + "\n" + this.conclusion + "\n" + this.referencias;
     }
 }

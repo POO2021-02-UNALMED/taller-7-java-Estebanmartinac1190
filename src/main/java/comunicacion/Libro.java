@@ -60,12 +60,4 @@ public class Libro extends Escrito {
 		int Fala=2;
 		return this.getPaginas() * ruca * Fala; 
 	}
-
-	@Override
-	String interpretacion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-
 }

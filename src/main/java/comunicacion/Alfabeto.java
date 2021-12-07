@@ -42,9 +42,4 @@ public class Alfabeto extends Pictograma {
 		return espacio.strip().substring(0, espacio.length()-2);
 	}
 
-	@Override
-	String interpretacion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

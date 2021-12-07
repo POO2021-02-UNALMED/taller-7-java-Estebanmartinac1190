@@ -1,22 +1,18 @@
 package comunicacion;
 
-public class Periodico extends Escrito {
-	//ATRIBUTOS
-	private String fecha;
-	private String primicia;
-	private String interpretacion;
-	
-	//CONSTRUCTOR
-	public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia, String interpretacion) {
+public class Periodico extends Escrito{
+    private String fecha;
+    private String primicia;
+    private String interpretacion;
+
+    public Periodico(String origen, String titulo, String autor, int paginas, String fecha, String primicia, String interpretacion) {
         super(origen, titulo, autor, paginas);
         this.fecha = fecha;
         this.primicia = primicia;
         this.interpretacion = interpretacion;
     }
-	
-	//SET AND GET
-	
-	public String getFecha() {
+
+    public String getFecha() {
         return fecha;
     }
 
@@ -39,15 +35,12 @@ public class Periodico extends Escrito {
     public void setInterpretacion(String interpretacion) {
         this.interpretacion = interpretacion;
     }
-    
-    //METODOS
+
+    public int palabrasTotales(int colino) {
+        return this.getPaginas()*colino*10;
+    }
+
     public String toString() {
-    	return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + this.fecha + "\n" + this.primicia;
+        return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + this.fecha + "\n" + this.primicia;
     }
-    
-    public int palabrasTotales(int tula) {
-        int rin =10;
-    	return this.getPaginas()*tula *rin;
-    }
-	
 }

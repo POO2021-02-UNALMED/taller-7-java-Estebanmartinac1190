@@ -50,7 +50,7 @@ public class Libro extends Escrito{
         return this.getOrigen() + "\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" + this.getPaginas() + "\n" + this.co_autor + "\n" + this.editorial + "\n" + this.edicion;
     }
 
-    public int palabrasTotales(int x) {
-        return this.getPaginas() * x * 2;
+    public int palabrasTotales(int eno) {
+        return this.getPaginas() * eno * 2;
     }
 }
